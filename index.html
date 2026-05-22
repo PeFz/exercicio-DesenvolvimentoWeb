@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 4 - Cadastro e Login</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for premium typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <span class="logo">Atividade 4</span>
+            <nav>
+                <button id="nav-btn-cadastro" class="nav-button">Cadastro</button>
+                <button id="nav-btn-login" class="nav-button">Login</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <!-- Banner Card -->
+        <section class="banner-card">
+            <span class="badge-banner">EXERCÍCIO DE HTML, CSS E JAVASCRIPT</span>
+            <h1>Cadastro e login usando localStorage</h1>
+            <p>Este projeto simula um cadastro simples de usuário e uma tela de login.</p>
+        </section>
+
+        <!-- Two Column Forms Layout -->
+        <div class="forms-grid">
+            <!-- Register Card -->
+            <article class="card form-card" id="card-cadastro">
+                <h2>Criar conta</h2>
+                <p class="subtitle">Preencha os dados abaixo para cadastrar um novo usuário.</p>
+                
+                <form id="register-form">
+                    <div class="form-group">
+                        <label for="reg-name">Nome</label>
+                        <input type="text" id="reg-name" placeholder="Ex: Ana Silva" required autocomplete="name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="reg-email">E-mail</label>
+                        <input type="email" id="reg-email" placeholder="ana@email.com" required autocomplete="email">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="reg-password">Senha</label>
+                        <input type="password" id="reg-password" placeholder="Mínimo 6 caracteres" minlength="6" required autocomplete="new-password">
+                    </div>
+                    
+                    <button type="submit" class="btn-submit">Cadastrar</button>
+                </form>
+                
+                <p id="register-status" class="status-message hidden"></p>
+            </article>
+
+            <!-- Login Card -->
+            <article class="card form-card" id="card-login">
+                <h2>Entrar</h2>
+                <p class="subtitle">Use o e-mail e a senha cadastrados para acessar o sistema.</p>
+                
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="login-email">E-mail</label>
+                        <input type="email" id="login-email" placeholder="ana@email.com" required autocomplete="email">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="login-password">Senha</label>
+                        <input type="password" id="login-password" placeholder="Digite sua senha" required autocomplete="current-password">
+                    </div>
+                    
+                    <button type="submit" class="btn-submit">Entrar</button>
+                </form>
+                
+                <p id="login-status" class="status-message hidden"></p>
+            </article>
+        </div>
+
+        <!-- Logged In Area Card -->
+        <section class="card logged-in-card hidden" id="logged-in-area">
+            <div class="logged-in-content">
+                <span class="badge-logged">USUÁRIO LOGADO</span>
+                <h2>Bem-vindo(a), <span id="user-display-name"></span>!</h2>
+                <p>Esta área aparece somente depois que o login é realizado com sucesso.</p>
+            </div>
+            <div class="logged-in-actions">
+                <button id="btn-logout" class="btn-action-secondary">Sair</button>
+                <button id="btn-delete" class="btn-action-danger">Apagar cadastro</button>
+            </div>
+        </section>
+
+        <!-- Observer Card -->
+        <section class="card observer-card">
+            <h2>O que os alunos devem observar</h2>
+            <ul>
+                <li>O HTML deve usar elementos semânticos como <code>header</code>, <code>main</code>, <code>section</code>, <code>article</code> e <code>form</code>.</li>
+                <li>O CSS deve organizar a tela com cards, grid, espaçamento, cores leves e estados visuais.</li>
+                <li>O JavaScript escuta eventos de formulário, valida dados simples e usa <code>localStorage</code>.</li>
+            </ul>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
